@@ -20,7 +20,7 @@ if (yourBet.includes(betTeam) === true ) {
 function safeBet() {
 		if (betValue >= maxBet) {
 		betValue = betOnWin;
-		console.log("Woaaahh mate, lets slow down, we don't want to loose everything.")
+		console.log("Woaaahh mate, lets slow down, we don't want to lose everything.")
 		document.getElementById("minesBet").value = betValue;
 		document.querySelector('.btn-play').click();
 	} else {
