@@ -1,11 +1,11 @@
-var betValue = 60; //How much do you want to bet if you loose(it will be x2)//
-var betOnWin = 60;  //Edit how much do you want to bet after each win//
-var betTeam = "2"; //0 for UP| 1 for TT |2 for CT//
-var maxBet = 480; // Max bet
-var betRate = 2; //if loose how much do i need to increase the bet?
+let betValue = 60; //How much do you want to bet if you loose(it will be x2)//
+let betOnWin = 60;  //Edit how much do you want to bet after each win//
+let betTeam = "2"; //0 for UP| 1 for TT |2 for CT//
+let maxBet = 480; // Max bet
+let betRate = 2; //if loose how much do i need to increase the bet?
 //*******Dont edit below*******//
 function betMoney() {
-var yourBet = document.querySelector(".latest div:nth-child(2)").className;
+const yourBet = document.querySelector(".latest div:nth-child(2)").className;
 if (yourBet.includes(betTeam) === true ) {
 	betValue = betOnWin; 
 	console.log("You won last round so we're back to basic value.")
@@ -31,7 +31,7 @@ function safeBet() {
 }
 function repeatBet() {
 	//var interval = setInterval(betMoney, 10000000000);
-	var timer = document.querySelector(".rolling-inner div:nth-child(1)").innerHTML;
+	const timer = document.querySelector(".rolling-inner div:nth-child(1)").innerHTML;
 	if (timer.includes("10:") === true) {
 		console.log("Last Bet: " + betValue);
 		//var interval = setInterval(betMoney, 9000);
@@ -41,13 +41,13 @@ function repeatBet() {
 	}
 }
 //Buttons//
-var intervalRepeat = setInterval(repeatBet, 1000);
-var buttonStart = document.createElement("button");
-var buttonText = document.createTextNode("Start Bot");
+const intervalRepeat = setInterval(repeatBet, 1000);
+const buttonStart = document.createElement("button");
+const buttonText = document.createTextNode("Start Bot");
 buttonStart.appendChild(buttonText);
-var buttonPos = document.querySelector('.roulette-info');
+const buttonPos = document.querySelector('.roulette-info');
 buttonPos.appendChild(buttonStart);
-var buttonStyle = document.querySelector('.roulette-info > button'); 
+const buttonStyle = document.querySelector('.roulette-info > button'); 
 buttonStyle.style += "color: black";
 
 //Created by Karol Rostkowski aka Rostkowski//
