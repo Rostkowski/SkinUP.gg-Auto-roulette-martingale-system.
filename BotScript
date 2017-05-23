@@ -1,4 +1,4 @@
-let betValue = 60; //How much do you want to bet if you loose(it will be x2)//
+let betValue = 60; //How much do you want to bet if you lose(it will be x2)//
 let betOnWin = 60;  //Edit how much do you want to bet after each win//
 let betTeam = "2"; //0 for UP| 1 for TT |2 for CT//
 let maxBet = 480; // Max bet
