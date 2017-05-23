@@ -3,10 +3,10 @@ let betOnWin = 60;  //Edit how much do you want to bet after each win//
 let betTeam = "2"; //0 for UP| 1 for TT |2 for CT//
 let maxBet = 480; // Max bet
 let betRate = 2; //if loose how much do i need to increase the bet?
-//*******Dont edit below*******//
+                                                  //*******Dont edit below*******//
 function betMoney() {
-const yourBet = document.querySelector(".latest div:nth-child(2)").className;
-if (yourBet.includes(betTeam) === true ) {
+  const yourBet = document.querySelector(".latest div:nth-child(2)").className;
+  if (yourBet.includes(betTeam) === true ) {
 	betValue = betOnWin; 
 	console.log("You won last round so we're back to basic value.")
 	document.getElementById("minesBet").value = betValue;
@@ -18,23 +18,21 @@ if (yourBet.includes(betTeam) === true ) {
 }
 }
 function safeBet() {
-		if (betValue >= maxBet) {
-		betValue = betOnWin;
-		console.log("Woaaahh mate, lets slow down, we don't want to lose everything.")
-		document.getElementById("minesBet").value = betValue;
-		document.querySelector('.btn-play').click();
+  if (betValue >= maxBet) {
+    betValue = betOnWin;
+    console.log("Woaaahh mate, lets slow down, we don't want to lose everything.")
+    document.getElementById("minesBet").value = betValue;
+    document.querySelector('.btn-play').click();
 	} else {
-	console.log("You lost last round, lets double our basic value.")
-	document.getElementById("minesBet").value = betValue *= betRate;
-	document.querySelector('.btn-play').click();
+	    console.log("You lost last round, lets double our basic value.")
+	    document.getElementById("minesBet").value = betValue *= betRate;
+	    document.querySelector('.btn-play').click();
 	}
 }
 function repeatBet() {
-	//var interval = setInterval(betMoney, 10000000000);
 	const timer = document.querySelector(".rolling-inner div:nth-child(1)").innerHTML;
 	if (timer.includes("10:") === true) {
 		console.log("Last Bet: " + betValue);
-		//var interval = setInterval(betMoney, 9000);
 		betMoney();
 	} else {
 		console.log("Betting not enabled");
