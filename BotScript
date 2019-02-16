@@ -1,8 +1,8 @@
 let betValue = 60; //How much do you want to bet if you lose(it will be x2)//
 let betOnWin = 60;  //Edit how much do you want to bet after each win//
 let betTeam = "2"; //0 for UP| 1 for TT |2 for CT//
-let maxBet = 480; // Max bet
-let betRate = 2; //if loose how much do i need to increase the bet?
+let maxBet = 480; //Max amount on which return to base bet//
+let betRate = 2; //On lose multiply the bet by://
                                                   //*******Dont edit below*******//
 function betMoney() {
   const yourBet = document.querySelector(".latest div:nth-child(2)").className;
